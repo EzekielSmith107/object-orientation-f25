@@ -175,7 +175,7 @@ user.name = "Bryan G. Smith";
 */
 
 //Code Here
-
+delete user.age;
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -185,8 +185,16 @@ user.name = "Bryan G. Smith";
 */
 
 //Code here
+class Cat {
+  constructor(name, age, color) {
+    this.name = name;
+    this.age = age;
+    this.color = color;
+  }
+}
 
-
+let cat1 = new Cat("Snowball", 10, "Black");
+console.log(cat1.name);
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
@@ -197,6 +205,19 @@ user.name = "Bryan G. Smith";
 */
 
 //Code here
+class Wizard {
+  constructor(name, age, favoriteSpell) {
+    this.name = name;
+    this.age = age;
+    this.favoriteSpell = favoriteSpell;
+  }
+  castSpell() {
+    console.log(`${this.name} has cast ${this.favoriteSpell}.`);
+  }
+}
+
+let wizard1 = new Wizard("Abra", 1000, "Teleport");
+wizard1.castSpell();
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -222,6 +243,23 @@ user.name = "Bryan G. Smith";
 */
 
 //Code Here
+class Phone {
+  constructor(brand, model, storage, color, price) {
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.price = price;
+    this.sold = false;
+  }
+  sell () {
+    this.sold = true;
+    console.log(`${this.brand} ${this.model} has been sold.`)
+  }
+  changePrice(newPrice) {
+    this.price = newPrice;
+  }
+}
 
   
 /*
@@ -235,6 +273,9 @@ user.name = "Bryan G. Smith";
 */
 
 //Code Here
+let phone1 = new Phone("Nokia", "Lightning", 16, "silver", 300);
+let phone2 = new Phone("Samsung", "Galactica", 8, "white", 2000);
+let phone3 = new Phone("Fridge", "BTU", 300, "black and yellow", 50);
 
 /* 
   Call the changePrice function on one of your phones, 
@@ -244,7 +285,8 @@ user.name = "Bryan G. Smith";
 */ 
 
 //Code Here 
-
+phone2.changePrice(200);
+console.log(phone2);
 
 /*
   Now call the sell method on one of your other phone objects
@@ -253,7 +295,8 @@ user.name = "Bryan G. Smith";
 */
 
 //Code Here 
-
+phone3.sell();
+console.log(phone3.sold);
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
 
